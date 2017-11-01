@@ -1,49 +1,41 @@
-var stack = new Array();
-
-function pushItem(stack,item)
-{
-	var size = stack.length;
-
-	stack[size]=item;
+var stack = function(){
 	
-	return stack;
+	this.count = 0;
+	this.storage = {};
+	
+	this.pop = function()
+	{
+		if(this.count===0)
+			return false;
+		else
+		{
+			var item = this.storage[count];
+			delete this.storage[count];
+			return item;
+		}
+	}
+	
+	this.push = function(item)
+	{
+		this.storage[this.count]=item;
+		this.count++;
+	}
+	
+	this.size = function(){
+		return this.count;
+	}
 }
 
-function popItem(stack)
-{
-	var size = stack.length;
-		
-	if(size<=0) 
-		return false;
-	
-	size--;
-	
-	stack.splice(size, 1);
-	return stack;
-}
+var myStack = new stack();
 
-function getSize(stack)
-{
-	var size = stack.length;
-	if(size>0)	
-		return size;
-	else 
-		return false;
-}
-console.log(getSize(stack));
+console.log(myStack);
 
-console.log(popItem(stack));
+console.log(myStack.pop());
 
-console.log(pushItem(stack,"Atul"));
-console.log(pushItem(stack,"Ashu"));
-console.log(pushItem(stack,"Bhaskar"));
-console.log(pushItem(stack,"Amit"));
+myStack.push("Atul");
 
-console.log(popItem(stack));
-console.log(getSize(stack));
+myStack.push("Jindal");
 
-console.log(popItem(stack));
-console.log(getSize(stack));
+console.log(myStack);
 
-console.log(popItem(stack));
-console.log(getSize(stack));
+console.log(myStack.size());
