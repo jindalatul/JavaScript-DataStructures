@@ -1,10 +1,11 @@
 /*
-
+References
 https://www.youtube.com/watch?v=MozZbtPyqt8
-
+https://codepen.io/beaucarnes/pen/ybOvBq?editors=0011
 */
-/* 
- Insert at, remove at perticular index needs to be implemented
+/*
+Pending tasks
+- Insert at / remove at perticular index needs to be implemented
 */
 
 var Node = function(data){
