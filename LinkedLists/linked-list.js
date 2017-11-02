@@ -5,7 +5,7 @@ https://codepen.io/beaucarnes/pen/ybOvBq?editors=0011
 */
 /*
 Pending tasks
-- Insert at / remove at perticular index needs to be implemented
+- Insert at / remove at / reverse List perticular index needs to be implemented
 */
 
 var Node = function(data){
