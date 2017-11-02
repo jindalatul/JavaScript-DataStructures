@@ -3,6 +3,9 @@
 https://www.youtube.com/watch?v=MozZbtPyqt8
 
 */
+/* 
+ Insert at, remove at perticular index needs to be implemented
+*/
 
 var Node = function(data){
 	this.data = data;
